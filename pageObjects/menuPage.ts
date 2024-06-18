@@ -7,8 +7,7 @@ export class MenuPage {
         this.page = page;
     }
     async goToMenu(menuLink: string, subMenuLink: string, subMenuName: string) {
-        // await this.page.getByRole('link', { name: menuLink }).click();
-        // await expect(this.page.getByRole('link', { name: menuName, exact: true })).toBeVisible();
+    
 
         await this.page.getByRole('banner').getByRole('list').getByRole('button', { name: menuLink }).click();
         await this.page.getByRole('link', { name: subMenuLink }).click();
